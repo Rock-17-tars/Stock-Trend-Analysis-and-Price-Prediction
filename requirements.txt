@@ -1,8 +1,28 @@
-streamlit
-pandas
-numpy
-plotly
-scikit-learn
-yfinance
-requests
-nsepy
+# --- Core app framework ---
+streamlit==1.40.0          # Web UI, session_state, layout, theming
+
+# --- HTTP and APIs ---
+requests==2.32.3           # Call Marketstack REST API
+
+# --- Data handling and numerics ---
+pandas==2.2.3              # DataFrame, CSV reading, rolling windows
+numpy==2.1.3               # Numerical arrays, std dev, index arrays
+
+# --- Machine learning ---
+scikit-learn==1.5.2        # LinearRegression model and ML utilities
+
+# --- Visualization ---
+plotly==5.24.1             # Candlestick charts, line charts, RSI plot
+
+# --- Market data sources ---
+yfinance==0.2.48           # Yahoo Finance OHLCV download
+nsepy==0.8                 # NSE India historical data (fallback for .NS)
+
+# --- Time and date helpers (often dependencies but safe to pin) ---
+python-dateutil==2.9.0.post0
+pytz==2024.2
+
+# --- Optional: to avoid SSL / cert issues on some Windows setups ---
+certifi==2024.8.30
+charset-normalizer==3.4.1
+idna==3.6
